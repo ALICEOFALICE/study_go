@@ -17,11 +17,14 @@ func flags() {
 	flag.Parse()
 	fmt.Println(*mode)
 }
-func abab(a *int) {
-	println(*a)
+func abab(a *string) {
+	fmt.Println(*a)
 }
 func main() {
 	str := new(string)
 	*str = "GO语言开发"
+	strs := "123"
 	println(*str)
+	abab(&strs)
+
 }
