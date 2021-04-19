@@ -13,4 +13,8 @@ func main() {
 	fmt.Print("\n")
 	fmt.Print(ccc["sql"])
 	fmt.Print("\n")
+	fmt.Println("如果键存在，那么会返回True")
+	value, ok := ccc["sql"]
+	fmt.Println(ok)
+	fmt.Printf(value)
 }
