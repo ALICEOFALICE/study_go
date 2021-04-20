@@ -17,4 +17,8 @@ func main() {
 	value, ok := ccc["sql"]
 	fmt.Println(ok)
 	fmt.Printf(value)
+	for key, val := range ccc {
+		fmt.Print(key, val)
+		fmt.Printf("\n")
+	}
 }
