@@ -33,8 +33,16 @@ func englishtj(english *string) (ret map[string]int) {
 	}
 	return m2
 } //英文查找并返回数量
+func f1() int {
+	return 10
+}
+func f2(id int) (ret int) {
+	rel := id * 2.0
+	return rel
+}
 func main() {
 	d := "We present the short story The Romance of a Busy Broker by O Henry The story was originally adapted and recorded by the US Department of State"
 	fmt.Print(englishtj(&d))
+	fmt.Print(f2(f1()))
 
 }
