@@ -22,6 +22,7 @@ jobs:
           pwd
           pip install --upgrade vika
           pip list
+          python weige.py
           ls -al
 #      - name: Update paper list
 #        run: |
