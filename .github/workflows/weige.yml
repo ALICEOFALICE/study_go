@@ -26,6 +26,8 @@ jobs:
         with:
           python-version: 3.7
       - name: install vika
+        run: |
+            pip install -r requirements.txt
       - name: Update paper list
         run: |
           cd .github/run
