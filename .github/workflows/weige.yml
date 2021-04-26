@@ -20,7 +20,7 @@ jobs:
           cd autoRun/
           pip install --upgrade vika
           pip list
-      - name: Update paper list
-        run: |
-          cd autoRun/
           python vika.py
+#      - name: Update paper list
+#        run: |
+#          cd autoRun/
