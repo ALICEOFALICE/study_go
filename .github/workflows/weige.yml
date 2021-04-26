@@ -16,8 +16,8 @@ jobs:
         with:
           python-version: 3.7
       - name:install vika
-        run : |
-           pip install vika
+        run: |
+          pip install vika
 
       - name: Update paper list
         run: |
