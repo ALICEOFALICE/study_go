@@ -1,35 +1,22 @@
-name: Update vika playtime
+name: Python application
 
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+on: [push]
+
 jobs:
   build:
-    name: Update vika playtime
+
     runs-on: ubuntu-latest
-    env:
-#      GH_TOKEN: ${{ secrets.GH_TOKEN }}
-#      GIST_ID: 1514a2e76fed77d7e54836282376cff6
-#      STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-#      STEAM_ID: ${{ secrets.STEAM_ID }}
-#      UPDATE_OPTION: GIST_AND_MARKDOWN
-#      MARKDOWN_FILE: README.md
 
-  steps:
-    - name: checkout actions
-    - uses: actions/checkout@v1
+    steps:
+      - name: checkout actions
+      - uses: actions/checkout@v1
 
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
 
-    - name: install vika
-      run: |
-        pip install vika
-    - name: Update paper list
-      run: |
-        cd .github/run
-        python vika.py
+      - name: Update paper list
+        run: |
+          cd /github/run
+          python weige.py
