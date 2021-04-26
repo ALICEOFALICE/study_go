@@ -10,12 +10,14 @@
 # @Software: PyCharm
 from vika import Vika
 import os
-PR_TITLE=os.environ.get('PR_TITLE','')
+PR_TITLE=os.environ.get('PR_TITLE')
+PR_TITLE=os.environ.get('PR_USER')
+PR_TITLE=os.environ.get('PR_URL')
+PR_TITLE=os.environ.get('PR_URL')
 
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 print(PR_TITLE)
 print(PR_USER)
 print(PR_URL)
-print(PR_TITLE)
 record = dst.records.create({"提交ID":PR_USER})
