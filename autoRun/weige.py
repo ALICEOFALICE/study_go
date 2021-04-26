@@ -10,8 +10,8 @@
 # @Software: PyCharm
 from vika import Vika
 import os
-if __name__ == '__main__':
-    PR_TITLE = os.environ["PR_TITLE"]
+PR_TITLE=os.environ.get('PR_TITLE','')
+
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 print(PR_TITLE)
