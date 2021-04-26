@@ -18,5 +18,5 @@ jobs:
 
       - name: Update paper list
         run: |
-          cd ./run
+          cd autoRun/vika.py
           python vika.py
