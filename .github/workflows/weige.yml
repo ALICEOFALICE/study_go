@@ -17,18 +17,19 @@ jobs:
 #      UPDATE_OPTION: GIST_AND_MARKDOWN
 #      MARKDOWN_FILE: README.md
 
-    steps:
-      - name: checkout actions
-      - uses: actions/checkout@v1
+  steps:
+    - name: checkout actions
+    - uses: actions/checkout@v1
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.7
-      - name: install vika
-        run: |
-            pip install vika
-      - name: Update paper list
-        run: |
-          cd .github/run
-          python vika.py
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    - name: install vika
+      run: |
+        pip install vika
+    - name: Update paper list
+      run: |
+        cd .github/run
+        python vika.py
