@@ -41,6 +41,19 @@ func post(url, contenType string) {
 	content, err := ioutil.ReadAll(post.Body)
 	fmt.Printf("%s", content)
 }
+func tets(url string) {
+	content, err := http.Get(url)
+	if err != nil {
+		panic("报错了，错误内容你自己猜")
+	}
+	//q:=content.URL
+	rs, err := ioutil.ReadAll(content.Body)
+	if err != nil {
+		panic("炸了")
+	}
+	fmt.Print(rs)
+
+}
 func main() {
 	post("https://bduss.loli.fit/pixiv.php", "application/json")
 }
