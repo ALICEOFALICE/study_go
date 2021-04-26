@@ -17,8 +17,8 @@ jobs:
           python-version: 3.7
       - name: install vika
         run: |
+          cd autoRun/
           pip install vika
-
       - name: Update paper list
         run: |
           cd autoRun/
