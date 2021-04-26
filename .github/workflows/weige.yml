@@ -18,7 +18,7 @@ jobs:
       - name: install vika
         run: |
           cd autoRun/
-          pip install vika
+          pip install --upgrade vika
       - name: Update paper list
         run: |
           cd autoRun/
