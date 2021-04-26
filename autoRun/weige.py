@@ -11,8 +11,8 @@
 from vika import Vika
 import os
 PR_TITLE=os.environ.get('PR_TITLE')
-PR_TITLE=os.environ.get('PR_USER')
-PR_TITLE=os.environ.get('PR_URL')
+PR_USER=os.environ.get('PR_USER')
+PR_URL=os.environ.get('PR_URL')
 PR_TITLE=os.environ.get('PR_URL')
 
 vika = Vika("uskK7MnF6tOf89ammoV851g")
