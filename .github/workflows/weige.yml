@@ -15,10 +15,11 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
+
+      - name: install vika
+        env:
           $VIKA_TOKEN: ${{ secrets.VKTOKEN }}
           $VIKA_url: ${{ secrets.VKURL }}
-      - name: install vika
-
         run: |
           cd autoRun/
           pip install vika
