@@ -17,11 +17,4 @@ jobs:
           python-version: 3.7
       - name: install vika
         run: |
-          echo ::set-env name=RELEASE_VERSION::${GITHUB_REF#refs/*/}
-          echo $name
-          cd autoRun/
-
-          pip install --upgrade vika
-          pip list
-
-          ls -al
+          echo $GITHUB_EVENT_PATH
