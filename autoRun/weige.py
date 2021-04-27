@@ -18,14 +18,6 @@ vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("dstn3TYmEbWgl3EYbQ")
 
 record = dst.records.create({
-                            	"提交者：": env["commits"][0]["author"]["name"],
-                            	"邮箱：": env["commits"][0]["author"]["email"],
-                            	"提交者用户名：": env["commits"][0]["author"]["username"],
-                            	"提交注释：": env["commits"][0]["message"],
-                            	"commit_ID": str(env["commits"][0]["id"]),
-                            	"提交时间：": env["commits"][0]["timestamp"],
-                            	"仓库名称：": env["repository"]["name"],
-                            	"仓库简介：": env["repository"]["description"],
-                            	"编程语言：": env["repository"]["language"],
-                            	"主分支：": env["repository"]["master_branch"],
+                            	{"title": env["commits"][0]["author"]["name"],
+
                             })
