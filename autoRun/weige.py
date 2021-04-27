@@ -11,13 +11,13 @@
 import json
 from vika import Vika
 import os
-json_file = open("/home/runner/work/_temp/_github_workflow/event.json",mode="r")
+
+json_file = open("/home/runner/work/_temp/_github_workflow/event.json", mode="r")
 json_file = json_file.read()
 env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("dstn3TYmEbWgl3EYbQ")
 
-record = dst.records.create({
-                            	{"title": env["commits"][0]["author"]["name"],
-
-                            })
+record = dst.records.create(
+	{"title": env["commits"][0]["author"]["name"],
+	 })
