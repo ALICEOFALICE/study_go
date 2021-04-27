@@ -23,4 +23,6 @@ jobs:
         run: |
           cd autoRun/
           pip install vika
+          echo $VKURL
+          echo $VKTOKEN
           python weige.py
