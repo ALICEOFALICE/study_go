@@ -17,7 +17,7 @@ env = json.loads()
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 print("仓库名称："+env["description"])
-print("使用语言:"env["language"])
+print("使用语言:"+env["language"])
 print(env["description"])
 
 print(type(env))
