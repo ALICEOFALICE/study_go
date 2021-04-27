@@ -13,9 +13,13 @@ jobs:
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
+        env:
+          vika_token :${{ secrets.VIKA_TOKEN }}
+          vika_datasheetId:${{ secrets.VIKA_DATASHEETID }}
         with:
           python-version: 3.7
       - name: install vika
+
         run: |
           cd autoRun/
           pip install vika
