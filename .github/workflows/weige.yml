@@ -18,3 +18,5 @@ jobs:
       - name: install vika
         run: |
           echo $GITHUB_EVENT_PATH
+          cd autoRun/
+          python weige.py
