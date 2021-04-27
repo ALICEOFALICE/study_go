@@ -17,7 +17,6 @@ env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("dstn3TYmEbWgl3EYbQ")
 
-//vika_upadta_dagta =
 record = dst.records.create({
                             	"提交者：": env["commits"][0]["author"]["name"],
                             	"邮箱：": env["commits"][0]["author"]["email"],
