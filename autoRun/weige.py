@@ -28,5 +28,4 @@ record = dst.records.create({
                             	"仓库简介：": env["repository"]["description"],
                             	"编程语言：": env["repository"]["language"],
                             	"主分支：": env["repository"]["master_branch"],
-                            	"链接：": env["repository"]["html_url"],
                             })
