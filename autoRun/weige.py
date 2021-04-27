@@ -18,7 +18,10 @@ vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 
 print("提交者："+env["commits"][0]["author"]["name"])
-print(env["commits"])
+print("邮箱："+env["commits"][0]["author"]["email"])
+print("提交者用户名："+env["commits"][0]["author"]["username"])
+print("提交者用户名："+env["commits"][0]["author"]["username"])
+print(env["commits"][1])
 
 print(type(env))
 # record = dst.records.create({"提交ID":})
