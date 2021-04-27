@@ -17,7 +17,7 @@ env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 
-print("提交者："+env["commits"][0]["author"]["name"])
+print(env["commits"][0]["author"]["name"])
 print("使用语言:"+env["commits"])
 
 print(type(env))
