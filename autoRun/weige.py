@@ -11,7 +11,9 @@
 import json
 from vika import Vika
 import os
-env = json.loads("/home/runner/work/_temp/_github_workflow/event.json")
+json_file = open("/home/runner/work/_temp/_github_workflow/event.json",mode="r")
+json_file = json_file.read()
+env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 print(env)
