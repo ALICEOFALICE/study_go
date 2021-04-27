@@ -18,8 +18,8 @@ jobs:
 
       - name: install vika
         env:
-          $VIKA_TOKEN: ${{ secrets.VKTOKEN }}
-          $VIKA_url: ${{ secrets.VKURL }}
+          $VKTOKEN: ${{ secrets.VKTOKEN }}
+          $VKURL: ${{ secrets.VKURL }}
         run: |
           cd autoRun/
           pip install vika

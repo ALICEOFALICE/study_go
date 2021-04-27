@@ -13,8 +13,8 @@ from vika import Vika
 import os
 json_file = open("/home/runner/work/_temp/_github_workflow/event.json",mode="r")
 json_file = json_file.read()
-vika_token = os.environ["VIKA_TOKEN"]
-vika_url = os.environ["VIKA_url"]
+vika_token = os.environ["VKTOKEN"]
+vika_url = os.environ["VKURL"]
 env = json.loads(json_file)
 vika = Vika(vika_token)
 # 通过 datasheetId 来指定要从哪张维格表操作数据。
