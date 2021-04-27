@@ -17,8 +17,8 @@ jobs:
           python-version: 3.7
       - name: install vika
         env:
-          vika_token:${{ secrets.VIKA_TOKEN }}
-          vika_datasheetId:${{ secrets.VIKA_DATASHEETID }}
+          vika_token :${ secrets.VIKA_TOKEN }
+          vika_datasheetId:${ secrets.VIKA_DATASHEETID }
         run: |
           cd autoRun/
           pip install vika
