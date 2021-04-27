@@ -13,11 +13,9 @@ jobs:
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
-        env:
-          vika_token :${{ secrets.VIKA_TOKEN }}
-          vika_datasheetId:${{ secrets.VIKA_DATASHEETID }}
         with:
           python-version: 3.7
+          VIKA_TOKEN: ${{ secrets.VIKA_TOKEN }} # GitHub 密钥 ACCESS_TOKEN 是在第二步Settings的Secrets中新增时定义的Name,要保持一致
       - name: install vika
 
         run: |
