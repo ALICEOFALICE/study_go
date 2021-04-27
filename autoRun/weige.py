@@ -19,8 +19,6 @@ env = json.loads(json_file)
 vika = Vika(vika_token)
 # 通过 datasheetId 来指定要从哪张维格表操作数据。
 datasheet = vika.datasheet(vika_url, field_key="id")
-print(vika_token)
-print(vika_url)
 row = datasheet.records.create({
   "fldp3Jyag9dcT": str(env["commits"][0]["id"]),
   "fldIilczY4AtL": env["repository"]["name"],
@@ -34,4 +32,5 @@ row = datasheet.records.create({
   "fldhpQbZKKfaW": env["repository"]["master_branch"],
   "fld3fYMdpSROJ": env["repository"]["html_url"],
 })
-
+print(row)
+print("运行成功")
