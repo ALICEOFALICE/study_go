@@ -8,16 +8,12 @@
 # @Email   : xie@loli.fit
 # @File    : aba.py
 # @Software: PyCharm
+import json
 from vika import Vika
 import os
-PR_TITLE=os.environ.get('PR_TITLE')
-PR_USER=os.environ.get('PR_USER')
-PR_URL=os.environ.get('PR_URL')
-PR_TITLE=os.environ.get('PR_URL')
-
+env = json.loads("/home/runner/work/_temp/_github_workflow/event.jso")
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
-print(PR_TITLE)
-print(PR_USER)
-print(PR_URL)
-record = dst.records.create({"提交ID":PR_USER})
+print(env)
+print(type(env))
+# record = dst.records.create({"提交ID":})
