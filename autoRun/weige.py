@@ -16,9 +16,9 @@ json_file = json_file.read()
 env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
-print("仓库名称："+env["description"])
-print("使用语言:"+env["language"])
-print(env["description"])
+
+print("提交者："+env["commits"][0]["author"]["name"])
+print("使用语言:"+env["commits"])
 
 print(type(env))
 # record = dst.records.create({"提交ID":})
