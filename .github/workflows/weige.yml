@@ -15,7 +15,8 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
-          VIKA_TOKEN: ${{ secrets.VIKA_TOKEN }} # GitHub 密钥 ACCESS_TOKEN 是在第二步Settings的Secrets中新增时定义的Name,要保持一致
+          $VIKA_TOKEN: ${{ secrets.VKTOKEN }}
+          $VIKA_url: ${{ secrets.VKURL }}
       - name: install vika
 
         run: |
