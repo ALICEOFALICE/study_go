@@ -17,17 +17,17 @@ env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
 dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
 
-print("提交者："+env["commits"][0]["author"]["name"])
-print("邮箱："+env["commits"][0]["author"]["email"])
-print("提交者用户名："+env["commits"][0]["author"]["username"])
-print("提交注释："+env["commits"][0]["message"])
-print("commit_ID"+str(env["commits"][0]["id"]))
-print("提交时间："+env["commits"][0]["timestamp"])
-print("仓库名称："+env["repository"]["name"])
-print("仓库简介："+env["repository"]["description"])
-print("编程语言："+env["repository"]["language"])
-print("主分支："+env["repository"]["master_branch"])
-print("链接："+env["repository"]["html_url"])
-
-print(type(env))
-# record = dst.records.create({"提交ID":})
+vika_upadta_dagta = {
+	"提交者：": env["commits"][0]["author"]["name"],
+	"邮箱：": env["commits"][0]["author"]["email"],
+	"提交者用户名：": env["commits"][0]["author"]["username"],
+	"提交注释：": env["commits"][0]["message"],
+	"commit_ID": str(env["commits"][0]["id"]),
+	"提交时间：": env["commits"][0]["timestamp"],
+	"仓库名称：": env["repository"]["name"],
+	"仓库简介：": env["repository"]["description"],
+	"编程语言：": env["repository"]["language"],
+	"主分支：": env["repository"]["master_branch"],
+	"链接：": env["repository"]["html_url"],
+}
+record = dst.records.create(vika_upadta_dagta)
