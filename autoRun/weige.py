@@ -15,7 +15,7 @@ json_file = open("/home/runner/work/_temp/_github_workflow/event.json",mode="r")
 json_file = json_file.read()
 env = json.loads(json_file)
 vika = Vika("uskK7MnF6tOf89ammoV851g")
-dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstXHYNcifpEsJuMjZ/viwvYeltzpZ5Z")
+dst = vika.datasheet("https://vika.cn/space/spcNuHrHJgQVZ/workbench/dstn3TYmEbWgl3EYbQ/viwQn2SSxT225")
 
 vika_upadta_dagta = {
 	"提交者：": env["commits"][0]["author"]["name"],
