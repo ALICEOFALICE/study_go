@@ -23,7 +23,7 @@ print("提交者用户名："+env["commits"][0]["author"]["username"])
 print("提交注释："+env["commits"][0]["message"])
 print("commit ID"+str(env["commits"][0]["id"]))
 print("提交时间："+env["commits"][0]["timestamp"])
-print("提交时间："+env["commits"][0]["timestamp"])
+print("提交时间："+env["commits"][0]["name"])
 
 print(type(env))
 # record = dst.records.create({"提交ID":})
