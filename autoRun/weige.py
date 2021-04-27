@@ -13,10 +13,12 @@ from vika import Vika
 import os
 json_file = open("/home/runner/work/_temp/_github_workflow/event.json",mode="r")
 json_file = json_file.read()
+vika_token = os.environ["vika_token"]
+vika_url = os.environ["vika_url"]
 env = json.loads(json_file)
-vika = Vika("uskK7MnF6tOf89ammoV851g")
+vika = Vika(vika_token)
 # 通过 datasheetId 来指定要从哪张维格表操作数据。
-datasheet = vika.datasheet("dstn3TYmEbWgl3EYbQ", field_key="id")
+datasheet = vika.datasheet(vika_url, field_key="id")
 
 row = datasheet.records.create({
   "fldp3Jyag9dcT": str(env["commits"][0]["id"]),

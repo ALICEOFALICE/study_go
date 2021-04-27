@@ -16,8 +16,10 @@ jobs:
         with:
           python-version: 3.7
       - name: install vika
+        env:
+          vika_token=${{ secrets.vika_token }}
+          vika_datasheetId=${{ secrets.vika_datasheetId }}
         run: |
-          echo $GITHUB_EVENT_PATH
           cd autoRun/
           pip install vika
           python weige.py
