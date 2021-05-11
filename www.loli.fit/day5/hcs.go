@@ -7,11 +7,13 @@ import (
 
 var num int = 1
 var jsq1 sync.WaitGroup
+var lock sync.Mutex
 
 func add() {
 	for i := 0; i < 1000; i++ {
+		lock.Lock()
 		num++
-
+		lock.Unlock()
 	}
 	jsq1.Done()
 }
